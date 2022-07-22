@@ -24,7 +24,7 @@ def drawAll(img, buttonList):
         w, h = button.size
         cvzone.cornerRect(img, (button.pos[0], button.pos[1], button.size[0], button.size[1]),
                           20, rt=0)
-        cv2.rectangle(img, button.pos, (x + w, y + h), (255, 0, 255), cv2.FILLED)
+        cv2.rectangle(img, button.pos, (x + w, y + h), (100 , 100, 0), cv2.FILLED)
         cv2.putText(img, button.text, (x + 20, y + 65),
                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
     return img
@@ -88,8 +88,9 @@ while True:
                                 cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
                     finalText += button.text
                     sleep(0.15)
+                
 
-    cv2.rectangle(img, (50, 350), (700, 450), (175, 0, 175), cv2.FILLED)
+    cv2.rectangle(img, (50, 350), (1040, 450), (100 , 100, 0), cv2.FILLED)
     cv2.putText(img, finalText, (60, 430),
                 cv2.FONT_HERSHEY_PLAIN, 5, (255, 255, 255), 5)
 
